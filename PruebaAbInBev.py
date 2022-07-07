@@ -49,7 +49,7 @@ def gather_data():
     s3_resource = boto3.resource('s3')
     date = datetime.now()
     filename = f'{date.year}/{date.month}/{date.day}/OpinionesBancarias_df_prueba.csv'
-    response = s3_resource.Object(Bucket = 'twitter_data_analysis', key = filename).upload_file('/tmp/OpinionesBancarias_df_prueba.csv')
+    response = s3_resource.Object(Bucket = 'PruebaAbInBev', key = filename).upload_file('/tmp/OpinionesBancarias_df_prueba.csv')
     
     return response
 
